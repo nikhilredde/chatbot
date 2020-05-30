@@ -1,0 +1,124 @@
+intents:
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - IITTP
+  - IITTP_year
+  - IITTP_branches
+  - IITTP_hostels
+  - IITTP_location
+  - get_started
+  - ask
+  - yeah
+  - out_of_scope
+  - my_email_is
+  - my_password_is
+  - r_email_is
+  - my_sub_is
+  - my_format_is
+  - send_mail
+
+actions :
+  - action_reset_all_slots
+
+
+slots:
+  SenderMail:
+    type: unfeaturized
+  Password:
+    type: unfeaturized
+  RecipientMail:
+    type: unfeaturized
+  Subject:
+    type: unfeaturized
+  Format:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+
+forms:
+  - gmail_form
+  
+
+responses:
+
+  utter_get_started:
+  - text: "Hey! How may I help you? I can provide information about IITTP"
+  
+  utter_did_that_help:
+  - text: "Did that help?"
+
+  utter_do_you_need:
+  - text: "Do you need more information?"
+
+  utter_no:
+  - text: "Great, carry on!"
+
+  utter_phase:
+  - text: "The second phase is to create automatic intents and entities given a text or pdf"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am Phase 1 of customized chat bot."
+  
+  utter_IITTP: 
+  - text: "The name of the IIT in AP is IIT Tirupati"
+
+  utter_IITTP_year:
+  - text: "It was established in 2015"
+   
+  utter_IITTP_location:
+  - text: "IIT-Tirupati was initially functioned out of the campus of Chadalawada Group of Institutes in Tirupati, while the permanent building is coming up near Yerpedu located between Renigunta and Srikalahasti."
+  
+  utter_IITTP_hostels:
+  - text: "The hostel facility for both boys and girls has been arranged at Transit Campus, Yerpedu, which is to be coming up as the permanent campus."
+
+  utter_IITTP_branches:
+  - text: "The institute flagged its beginning with the following 4 departments 
+          1)Chemical Engineering (Started from Aug. 2018)
+          2)Civil Engineering 
+          3)Computer Science and Engineering
+          4)Electrical Engineering
+          5)Mechanical Engineering"
+  utter_ask_me :
+  - text: "What informatiom do you need?"
+  
+  utter_more_info :
+  - text: "https://iittp.ac.in/"
+
+  utter_company:
+  - text: "The bot is customized for EXAFLUENCE for more info please visit"
+
+  utter_default:
+  - text: "Sorry, I didn't understand that."
+
+  utter_ask_SenderMail :
+  - text: "Please Provide me with your Email Address"
+
+  utter_ask_Password :
+  - text: "Password :" 
+
+  utter_ask_RecipientMail :
+  - text: "Please Provide me with Recipient's Email Address"
+
+  utter_ask_Subject :
+  - text: "Subject :"
+
+  utter_ask_Format :
+  - text: "Format :"
+ 
+  utter_submit :
+  - text: "Sending mail to ...{RecipientMail}"
+
+  utter_confirm :
+  - text: "Mail sent"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
